@@ -31,11 +31,27 @@
 
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 
-Console.WriteLine("Введите число");
-string num = Console.ReadLine();
-if(Int32.Parse(num)%2==0){
-    Console.WriteLine("Число чётное");
+//Console.WriteLine("Введите число");
+//string num = Console.ReadLine();
+//if(Int32.Parse(num)%2==0){
+  //  Console.WriteLine("Число чётное");
+//}
+//else{
+  //  Console.WriteLine("Число нечётное");
+//}
+//Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+Console.WriteLine("Введите число:");
+int num = Int32.Parse(Console.ReadLine());
+while(num>2){
+    if (num%2==0){
+        Console.Write(num + ", ");
+    }
+    num--;
+}
+if(num==2){
+    Console.Write(num);
 }
 else{
-    Console.WriteLine("Число нечётное");
+    Console.Write("Нет чётных чисел");
 }
