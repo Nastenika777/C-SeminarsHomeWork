@@ -1,0 +1,75 @@
+// Задача 64 Задайте значения M и N. Напишите программу, которая выведет все натуральные числа по убыванию в промежутке от M до N.
+
+//using System;
+//using static System.Console;
+
+//Clear();
+
+//int M = AskNumber("M");
+//int N = AskNumber("N");
+//WriteLine($"M = {M}; N = {N}. -> \"{PrintRange(M, N)}\"");
+
+//static string PrintRange(int M, int N) {
+  //  if(N < M) {
+    //    return "";
+    //}
+    //string part = N == M ? $"{N}" : $"{N}, ";
+    //return part + PrintRange(M, N - 1);
+//}
+
+//static int AskNumber(string name) {
+  //  Write($"Введите число {name}: ");
+    //return int.Parse(ReadLine());
+//}
+
+//Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+//using System;
+//using static System.Console;
+
+//Clear();
+
+//int M = AskNumber("M");
+//int N = AskNumber("N");
+//WriteLine($"M = {M}; N = {N} -> {PrintSum(M, N)}");
+
+//static int PrintSum(int M, int N) {
+//    if(M > N) {
+  //      return 0;
+  //  }
+   // return M + PrintSum(M + 1, N);
+//}
+
+//static int AskNumber(string name) {
+  //  Write($"Введите число {name}: ");
+    //return int.Parse(ReadLine());
+//}
+
+//Задача 68 Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+using System;
+using static System.Console;
+
+Clear();
+
+int M = AskNumber("M");
+int N = AskNumber("N");
+WriteLine($"M = {M}; N = {N} -> A(m,n) = {Akerman(M, N)}");
+
+static int Akerman(int n, int m) {
+    if (n==0)
+        return m+1;
+    else
+        if ((n!=0)&&(m==0))
+            return Akerman(n-1,1);
+        else
+            return Akerman(n-1,Akerman(n,m-1));
+}
+
+static int AskNumber(string name) {
+    Write($"Введите число {name}: ");
+    return int.Parse(ReadLine());
+}
+
+
+
